@@ -1,8 +1,8 @@
 // Copyright 2010 Google Inc. All Rights Reserved.
 
 function injection() {
-  var pageLang = '{{$pageLang}}';
-  var userLang = '{{$userLang}}';
+  var pageLang = '{{$pageLang}}'; // page translate language
+  var userLang = '{{$userLang}}'; // user enter language
 
   var uid = '1E07F158C6FA4460B352973E9693B329';
   var teId = 'TE_' + uid;
@@ -16,7 +16,7 @@ function injection() {
 
   function newElem() {
     var elem = new google.translate.TranslateElement({
-      autoDisplay: false,
+      autoDisplay: true,
       floatPosition: 0,
       multilanguagePage: true,
       pageLanguage: pageLang
